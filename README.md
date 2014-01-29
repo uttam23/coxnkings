@@ -1,14 +1,9 @@
-coxnkings
-=========
-
-Code base for cox and kings social app
-
 
 Installation:
 
 Fork the repository
 
-Create a database 'coxnkings' or any other name
+Create a database 
 browse to the folder <root>/<source folder>/protected/data
 
 There are two sql files
