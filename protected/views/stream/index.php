@@ -7,14 +7,19 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Stream', 'url'=>array('create')),
-	array('label'=>'Manage Stream', 'url'=>array('admin')),
+	array('label'=>'View Posts', 'url'=>array('post/manage')),
 );
 ?>
 
-<h1>Streams</h1>
+<h1>Manage Streams</h1>
+<div id="addForm" class="box box-shadow">
+    <?php $this->renderPartial('_manage', array('model'=>$model)); ?>
+</div>
 
-<?php $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
-)); ?>
+<div class="streamList">
+    <?php $this->widget('zii.widgets.CListView', array(
+        'dataProvider'=>$dataProvider,
+        'itemView'=>'_view',
+    )); ?>
+</div>
+

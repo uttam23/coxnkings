@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Stream', 'url'=>array('create')),
+	array('label'=>'Create Stream', 'url'=>array('stream/manage')),
 );
 ?>
 

@@ -79,7 +79,7 @@ fieldset {
 }
 form label{
 float: left;
-width: 140px;
+/* width: 140px; */
 padding-top: 5px;
 text-align: right;
 }
@@ -129,7 +129,7 @@ margin-right: -15px;
 margin-left: -15px;	
 }
 
-form input,select,textarea { float:left; }
+/*form input,select,textarea { float:left; }*/
 
 div.errorMessage {
 	margin-left:140px;
@@ -147,7 +147,6 @@ div.errorMessage {
 
 input[type="button"],
 input[type="submit"]{
-  margin-left:140px; 
   color: #ffffff;
   background-color: #000;
   display: inline-block;
@@ -596,7 +595,7 @@ div.list-panel div img{
 
 
 /* ------
-[List Panel display
+[List Panel display]
 */
 i.icon-twitter{
     background: url(../img/twitter-16x16.png);
@@ -617,4 +616,24 @@ i.icon-gplus{
     height: 16px;
     margin-right: 2px;
     width: 16px;
+}
+
+/* steam form and display */
+.box{
+    padding: 25px 0 10px 0;
+    margin-bottom: 25px;
+    background: #FFFFFF;
+    border: 1px solid #EEEEEE;
+
+}
+.box-shadow
+{
+    -moz-border-radius: 10px; /* Firefox */
+    -webkit-border-radius: 10px; /* Safari and Chrome */
+    border-radius: 10px; /* Opera 10.5+, future browsers, and now also our behavior htc file */
+
+    -moz-box-shadow: 0px 1px 10px #eee; /* Firefox */
+    -webkit-box-shadow: 0px 1px 10px #eee; /* Safari and Chrome */
+    box-shadow: 0px 1px 10px #eee; /* Opera 10.5+, future browsers and IE6+ using our behavior htc file */
+
 }

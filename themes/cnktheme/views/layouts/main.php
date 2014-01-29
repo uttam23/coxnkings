@@ -67,8 +67,9 @@
 						'items'=>array(
 							array('label'=>'<i class="icon-screenshot"></i> Dashboard', 'url'=>array('/dashboard/index')),
 							array('label'=>'<i class="icon-picture"></i> Gallery', 'url'=>array('/gallery/index')),
-							array('label'=>'<i class="icon-file"></i> Pages', 'url'=>array('/page/index')),
-                            array('label'=>'<i class="icon-comment"></i> Social', 'url'=>array('/post/index')),
+                            array('label'=>'<i class="icon-file"></i> Widgets', 'url'=>array('/widget/index')),
+                            array('label'=>'<i class="icon-file"></i> Pages', 'url'=>array('/page/index')),
+                            array('label'=>'<i class="icon-comment"></i> Social', 'url'=>array('/post/manage')),
                             array('label'=>'<i class="icon-user"></i> Users', 'url'=>array('/user/index'))
 						),
                         'encodeLabel'=>false,

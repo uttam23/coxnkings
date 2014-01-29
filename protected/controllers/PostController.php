@@ -40,7 +40,7 @@ class PostController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('create','update','admin','delete'),
+				'actions'=>array('manage','update','delete'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -50,19 +50,31 @@ class PostController extends Controller
 	}
 
     /**
-     * Lists all models.
+     * Lists all the posts on the system
+     * paginated ready for moderation
      */
-    public function actionIndex()
+    public function actionManage()
     {
         $dataProvider=new CActiveDataProvider('Post',array(
             'criteria' => array(
-                   'order' => 'date_added DESC'
+                'order' => 'date_added DESC'
             )
         ));
 
         $this->render('index',array(
             'dataProvider'=>$dataProvider,
         ));
+
+    }
+
+
+
+    /**
+     * Lists all models.
+     */
+    public function actionIndex()
+    {
+        //redirect to the manage page
     }
 
 
