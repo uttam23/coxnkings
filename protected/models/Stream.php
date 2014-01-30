@@ -37,7 +37,7 @@ class Stream extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title, keyword, modified_date', 'required'),
+			array('keyword', 'required'),
 			array('title, keyword', 'length', 'max'=>250),
 			array('is_phrase, is_profile, is_twitter, is_facebook, is_gplus', 'length', 'max'=>1),
 			array('status', 'length', 'max'=>8),
@@ -68,12 +68,12 @@ class Stream extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'title' => 'Title',
-			'keyword' => 'Keyword',
-			'is_phrase' => 'Is Phrase',
-			'is_profile' => 'Is Profile',
-			'is_twitter' => 'Is Twitter',
-			'is_facebook' => 'Is Facebook',
-			'is_gplus' => 'Is Gplus',
+			'keyword' => 'Search Term',
+			'is_phrase' => 'Exact Match',
+			'is_profile' => 'Is Twitter Profile',
+			'is_twitter' => 'Twitter',
+			'is_facebook' => 'Facebook',
+			'is_gplus' => 'Gplus',
 			'status' => 'Status',
 			'created_date' => 'Created Date',
 			'modified_date' => 'Modified Date',

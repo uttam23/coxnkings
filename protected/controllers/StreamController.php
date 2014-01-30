@@ -28,7 +28,7 @@ class StreamController extends Controller
 	{
 		return array(
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('create','update','index','admin','delete'),
+				'actions'=>array('manage','create','update','index','admin','delete'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -112,12 +112,26 @@ class StreamController extends Controller
 	/**
 	 * Lists all models.
 	 */
-	public function actionIndex()
+	public function actionManage()
 	{
-		$dataProvider=new CActiveDataProvider('Stream');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
+
+        $model=new Stream;
+
+        // Uncomment the following line if AJAX validation is needed
+        $this->performAjaxValidation($model);
+        if(isset($_POST['Stream']))
+        {
+            $model->attributes=$_POST['Stream'];
+            if($model->save())
+                $this->redirect(array('view','id'=>$model->id));
+        }
+
+        $dataProvider=new CActiveDataProvider('Stream');
+
+        $this->render('index',array(
+            'model'=>$model,
+            'dataProvider'=> $dataProvider,
+        ));
 	}
 
 	/**
